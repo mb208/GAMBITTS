@@ -52,11 +52,8 @@ All the simulation configurations for agents, environments, and simulation desig
 
 
 # Citation 
-
-> Marc Brooks, Gabriel Durham, Kihyuk Hong, and Ambuj Tewari.  
-> *Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions.*  
-> In *Advances in Neural Information Processing Systems 39 (NeurIPS 2025)*, 2025.  
-> [https://arxiv.org/abs/2505.16311](https://arxiv.org/abs/2505.16311)
+Marc Brooks, Gabriel Durham, Kihyuk Hong, and Ambuj Tewari. *Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions.*  In *Advances in Neural Information Processing Systems 39 (NeurIPS 2025)*, 2025.  
+ [https://arxiv.org/abs/2505.16311](https://arxiv.org/abs/2505.16311)
 
 ```bibtex
 @inproceedings{GAMBITTS2025,
