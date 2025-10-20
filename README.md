@@ -1,5 +1,4 @@
-# GAMBITTS
-This repository contains the code used to reproduce the simulation results from the paper: "Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions."
+# GAMBITTS: Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions
 
 
 ## Reproducing Simulations
@@ -50,3 +49,20 @@ These simulations were originally run on a high-performance compute cluster usin
 
 # Configuration files and data
 All the simulation configurations for agents, environments, and simulation design can be found in `configs`. The configuration files provided as well as the data provided in the `data` folder are sufficient for recreatng the results in the article.
+
+
+# Citation 
+
+> Marc Brooks, Gabriel Durham, Kihyuk Hong, and Ambuj Tewari.  
+> *Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions.*  
+> In *Advances in Neural Information Processing Systems 39 (NeurIPS 2025)*, 2025.  
+> [https://arxiv.org/abs/2505.16311](https://arxiv.org/abs/2505.16311)
+
+```bibtex
+@inproceedings{GAMBITTS2025,
+  author    = {Marc Brooks and Gabriel Durham and Kihyuk Hong and Ambuj Tewari},
+  title     = {Generator-Mediated Bandits: Thompson Sampling for GenAI-Powered Adaptive Interventions},
+  booktitle = {Advances in Neural Information Processing Systems 39 (NeurIPS 2025)},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2505.16311}
+}
