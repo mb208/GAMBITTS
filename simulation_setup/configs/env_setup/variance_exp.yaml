@@ -1,0 +1,3 @@
+prompt_db: data/sim_params/prompt_db_20dim.csv.gzip
+cfg_path: configs/environment
+grid_num: 5

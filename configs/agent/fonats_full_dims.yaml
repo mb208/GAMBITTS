@@ -1,0 +1,33 @@
+S: 0
+context:
+- curr_loc
+- prev_steps
+defaults:
+- covariates/optimism
+- covariates/formality
+- covariates/severity
+- covariates/clarity
+- covariates/encouragement
+- covariates/actionability
+- covariates/complexity
+- covariates/supportiveness
+- covariates/authenticity
+- covariates/conciseness
+- covariates/female-codedness
+- covariates/personalization
+- covariates/threat
+- covariates/authoritativeness
+- covariates/detail
+- covariates/politeness
+- covariates/urgency
+- covariates/emotiveness
+- covariates/humor
+- covariates/vision
+dim_batch: full_dim
+intercept: true
+mu: 0.0
+mu_intercept: 77.0
+precision: 1
+precision_intercept: 0.01
+type: foNATS-linear
+v2: 1

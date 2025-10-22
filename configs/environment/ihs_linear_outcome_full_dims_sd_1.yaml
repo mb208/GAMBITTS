@@ -1,0 +1,97 @@
+coefs:
+  actionability:
+    coef: 0.040136370348744385
+    offline_calc: true
+    one_hot: false
+  authenticity:
+    coef: 3.3264861953517615
+    offline_calc: true
+    one_hot: false
+  authoritativeness:
+    coef: -1.313443924680694
+    offline_calc: true
+    one_hot: false
+  clarity:
+    coef: 0.851636125295682
+    offline_calc: true
+    one_hot: false
+  complexity:
+    coef: 1.5563769750775276
+    offline_calc: true
+    one_hot: false
+  conciseness:
+    coef: 1.0728959573704338
+    offline_calc: true
+    one_hot: false
+  detail:
+    coef: 0.4173090237729409
+    offline_calc: true
+    one_hot: false
+  emotiveness:
+    coef: 0.7312511963413624
+    offline_calc: true
+    one_hot: false
+  encouragement:
+    coef: 2.160358501427435
+    offline_calc: true
+    one_hot: false
+  female-codedness:
+    coef: -2.9122947611036203
+    offline_calc: true
+    one_hot: false
+  formality:
+    coef: 0.2962066656538415
+    offline_calc: true
+    one_hot: false
+  humor:
+    coef: -2.512628188633971
+    offline_calc: true
+    one_hot: false
+  intercept:
+    coef: 81.42980947125086
+    offline_calc: true
+    one_hot: false
+  optimism:
+    coef: 0.990129514502621
+    offline_calc: true
+    one_hot: false
+  personalization:
+    coef: -0.6128668932666017
+    offline_calc: true
+    one_hot: false
+  politeness:
+    coef: -1.4833485522289174
+    offline_calc: true
+    one_hot: false
+  severity:
+    coef: -2.4805989835278264
+    offline_calc: true
+    one_hot: false
+  supportiveness:
+    coef: 1.8225326937613566
+    offline_calc: true
+    one_hot: false
+  threat:
+    coef: -0.14067951013203653
+    offline_calc: true
+    one_hot: false
+  urgency:
+    coef: 0.8287984037013294
+    offline_calc: true
+    one_hot: false
+  vision:
+    coef: 0.6975620011743475
+    offline_calc: true
+    one_hot: false
+dim_batch: full_dim
+errors:
+  dist: normal
+  iid: true
+  parms:
+    sd: 9.181795487559807
+past_contribution: false
+sd_id: sd_1
+seed: 323
+train_rmse: 24.556537760695193
+training_data: data/IHS/processed/2023/ihs_complete.csv
+type: linear

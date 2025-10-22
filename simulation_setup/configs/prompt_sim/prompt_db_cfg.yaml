@@ -1,0 +1,10 @@
+n_prompts: 1000
+dimension: 'optimism'
+llm_type: 'llama3.1' # Options: 'qwen2.5:7b'
+sim_path: 'data/sim_params'
+save_path: 'data/sim_params'
+filename: 'prompt_db.csv'
+data_path: 'data/simulations'
+model_prefix: 'models/vae_model/'
+model_suffix: 'final_model'
+text_col: 'llm_text'

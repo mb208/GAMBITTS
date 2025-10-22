@@ -1,0 +1,32 @@
+# This is the configuration file for the NeurIPs 2025
+type: foNATS-linear
+dim_batch: batch_1
+use_prompts: false
+context:
+    - curr_loc
+    - prev_steps
+defaults:
+  - covariates/optimism
+  - covariates/formality
+  - covariates/severity
+  - covariates/prev_steps
+  - covariates/curr_loc
+
+v2: 1
+S: 0
+mu: 0.0
+precision: 1
+intercept: true
+mu_intercept: 77.0
+precision_intercept: .01
+
+# covariates:
+#     optimism:
+#         one_hot: False
+#         text_based: True
+#     formality:
+#         one_hot: False
+#         text_based: True
+#     severity:
+#         one_hot: False
+#         text_based: True

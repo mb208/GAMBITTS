@@ -1,0 +1,36 @@
+# @package hydra.launcher
+submitit_folder: gllogs/${hydra.job.name} #%j #${hydra.sweep.dir}/submitit/%j
+timeout_min: 1440 # 24 hours, set to more if required
+cpus_per_task: 12
+gpus_per_node: null # Leave null
+# If using ddp, this needs to be greater than or equal to the number of GPUs in each node
+tasks_per_node: 1
+mem_gb: 32
+nodes: 1
+name: ${hydra.job.name}
+_target_: hydra_plugins.hydra_submitit_launcher.submitit_launcher.SlurmLauncher
+partition: standard
+qos: normal
+comment: null
+constraint: null # Leave null
+exclude: null # Leave null
+gres: null # The number of GPUs you require
+cpus_per_gpu: null # Leave null
+gpus_per_task: null # Leave null
+mem_per_gpu: null # Leave null
+mem_per_cpu: null # Leave null
+account: null # Put your account name here if required
+max_num_timeout: 0
+# Only include this if you want to requeue your jobs
+# additional_parameters: { signal: SIGUSR1@90, requeue: true }
+# Idk what this does
+array_parallelism: 10
+# Put whatever commands you want to run before the job here
+setup:
+    - echo "Running job"
+    # - export PYTHONPATH=$PYTHONPATH:/home/marcbr/NATS
+    # - source /home/$$USER/.bashrc
+    - source ~/.bashrc
+    - conda activate nats 
+    # To copy data with a progress bar
+    # - rsync -ruP --stats /path/to/data/ /destination/path/on/node/

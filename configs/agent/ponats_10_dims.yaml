@@ -1,0 +1,20 @@
+S: 0
+defaults:
+- covariates/authenticity
+- covariates/detail
+- covariates/formality
+- covariates/optimism
+- covariates/complexity
+- covariates/clarity
+- covariates/personalization
+- covariates/conciseness
+- covariates/politeness
+- covariates/encouragement
+dim_batch: 10_dim
+intercept: true
+mu: 0.0
+mu_intercept: 77.0
+precision: 1
+precision_intercept: 0.01
+type: poNATS-linear
+v2: 1

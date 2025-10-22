@@ -1,0 +1,12 @@
+defaults:
+  - env_setup: base_env_nn
+  - prompt_sim: prompt_db_cfg
+  - text_sim: text_gen_cfg
+  - override /hydra/launcher: submitit_slurm
+
+
+
+# - environment: ihs_base_mlp_outcome_model
+#   - context: context
+#   - agent: tuned_mlp4ensemble
+#   - simulation: sim_base

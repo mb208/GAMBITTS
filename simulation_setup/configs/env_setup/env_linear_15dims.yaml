@@ -1,0 +1,22 @@
+cfg_path: configs/environment
+data_path: data/IHS/processed/2023/ihs_complete.csv
+dim_batch: 15_dim
+dimensions:
+- threat
+- emotiveness
+- formality
+- optimism
+- complexity
+- clarity
+- female-codedness
+- conciseness
+- politeness
+- encouragement
+- detail
+- authoritativeness
+- actionability
+- severity
+- personalization
+filename: ihs_linear_outcome_15dims
+outcome: steps_sqrt
+seed: 323

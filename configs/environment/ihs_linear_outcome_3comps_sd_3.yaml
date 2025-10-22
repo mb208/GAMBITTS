@@ -1,0 +1,29 @@
+coefs:
+  formality:
+    coef: -0.4994438905907694
+    offline_calc: true
+    one_hot: false
+  intercept:
+    coef: 82.83602093916572
+    offline_calc: true
+    one_hot: false
+  optimism:
+    coef: 0.3523208653783577
+    offline_calc: true
+    one_hot: false
+  severity:
+    coef: -0.15796340012230414
+    offline_calc: true
+    one_hot: false
+dim_batch: batch_1
+errors:
+  dist: normal
+  iid: true
+  parms:
+    sd: 18.605835423099933
+past_contribution: false
+sd_id: sd_3
+seed: 323
+train_rmse: 24.532085991659486
+training_data: data/IHS/processed/2023/ihs_complete.csv
+type: linear

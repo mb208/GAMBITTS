@@ -1,0 +1,15 @@
+dim_batch: batch_1
+dimensions:
+- optimism
+- severity
+- formality
+errors:
+  dist: normal
+  iid: true
+  parms:
+    sd: 24.379724364549272
+model_path: models/mlp/ihs_3comps_mlp.pt
+online_calc_necessary: false
+sd_id: sd_4
+training_data: data/IHS/processed/2023/ihs_complete.csv
+type: nn

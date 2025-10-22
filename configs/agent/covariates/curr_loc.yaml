@@ -1,0 +1,4 @@
+curr_loc:
+  text_based: false
+  var_type: discrete
+  possible_values: ['work', 'home']

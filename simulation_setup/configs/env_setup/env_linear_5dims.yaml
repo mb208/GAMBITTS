@@ -1,0 +1,12 @@
+cfg_path: configs/environment
+data_path: data/IHS/processed/2023/ihs_complete.csv
+dim_batch: 5_dim
+dimensions:
+- authenticity
+- detail
+- politeness
+- optimism
+- clarity
+filename: ihs_linear_outcome_5dims
+outcome: steps_sqrt
+seed: 323

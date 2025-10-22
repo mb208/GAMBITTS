@@ -1,0 +1,12 @@
+# This is the configuration file for the 12/5/24 STATS 700 poster session
+
+---
+type: MAB
+K: 40 # number of prompts
+m: 77 # Before 0 # prior mean parameter
+nu: 5 # Before 15 # prior count parameter
+alpha: 1 # prior shape parameter
+beta: 10 # prior scale parameter
+
+
+context: []

@@ -1,0 +1,21 @@
+base_config_path: ./configs/agent/tuned_mlp4ensemble.yaml
+batch_size: 100
+use_prompts: false
+covariates:
+  formality:
+    one_hot: false
+    text_based: true
+  optimism:
+    one_hot: false
+    text_based: true
+  severity:
+    one_hot: false
+    text_based: true
+ensemble_size: 60 # was 20 previously (5-12-25)
+hidden_dimension: 64
+learning_rate: 0.1 # 0.0005
+num_monte_carlo_samples: 100 #32
+replay_buffer_capacity: 1024
+type: poNATS-ensemble
+dim_batch: batch_1
+run_date: '2025-14-04'

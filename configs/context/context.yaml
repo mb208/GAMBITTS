@@ -1,0 +1,26 @@
+# This is the context configuration file for the STATS 700 final report
+
+---
+ curr_loc:
+     var_type: discrete
+     possible_values:
+         - home
+         - work
+         - other
+     initial:
+         assign: random
+         probs: balanced
+     step:
+         assign: random
+         probs: balanced
+     prompt_var: True
+ prev_steps:
+     var_type: discrete
+     possible_values: [1,2,3,4]
+     initial:
+         assign: random
+         probs: balanced
+     step:
+         assign: random
+         probs: balanced
+     prompt_var: True

@@ -1,0 +1,21 @@
+hidden_size: [64] # must be list
+output_size: 1
+activation: 'ReLU'
+lr: 1e-3
+loss_fn: 'mse'
+optimizer: 'Adam'
+epochs: 100
+device: 'cpu'
+batch_size: 100
+seed: 323
+data_path: 'data/IHS/processed/2023/ihs_complete.csv'
+dimensions: ['optimism', 'severity', 'formality']
+# dimensions: ["optimism", "formality", "severity", "clarity", "encouragement", "actionability", "complexity", "supportiveness", "authenticity","conciseness", "female-codedness", "personalization", "threat", "authoritativeness", "detail","politeness" ,"urgency", "emotiveness", "humor", "vision"]
+outcome: "steps_sqrt"
+save_path: 'models/mlp/'
+model_id: 'ihs'
+model_suffix: 'mlp.pt'
+cfg_path: 'configs/environment'
+dim_batch: null
+# n_splits: 5
+# kfold_splits_path: 'data/kfold_splits/nn/'

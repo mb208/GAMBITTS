@@ -1,0 +1,42 @@
+text_sim:
+  style_dim: 'optimism'
+  style_path: 'data/sim_params/Style Dimensions.xlsx - Raw.csv'
+  sim_path: 'data/simulations'
+  n_messages: 2000
+  max_new_tokens: 60
+  do_sample: True
+  temperature: 0.6
+  top_p: 0.9
+
+# prompt_sim:
+#   n_prompts: 1000
+#   dimension: 'optimism'
+#   llm_type: 'llama3.1' # Options: 'qwen2.5:7b'
+#   sim_path: 'data/sim_params'
+#   filename: 'prompt_db.csv'
+#   data_path: 'data/simulations'
+#   model_prefix: 'models/vae_model/'
+#   model_suffix: 'final_model'
+#   text_col: 'llm_text'
+
+
+vae:
+  latent_dim: 1
+  epochs: 100
+  style_dim: 'optimism'
+  lr: 1e-4
+  eval_size: None
+  data_folder: 'data/simulations/'
+  filename: 'optimism_interventions_2000.csv'
+  output_dir: 'models/vae_model'
+
+
+ihs:
+  data_path: 'data/IHS/raw/2022/intervention/'
+  filename: '2022 IHS Messages FOR ANALYSIS.csv'
+  imputed_data: 'data/IHS/raw/2022/intervention/InterventionMessages_sent_2022.csv'
+  model_prefix: 'models/vae_model/'
+  model_suffix: 'final_model'
+  year: 2022
+  save_folder: 'data/IHS/processed/'
+  text_col: Text

@@ -1,0 +1,31 @@
+base_config_path: ./configs/agent/tuned_mlp4ensemble.yaml
+batch_size: 100
+defaults:
+- covariates/optimism
+- covariates/formality
+- covariates/severity
+- covariates/clarity
+- covariates/encouragement
+- covariates/actionability
+- covariates/complexity
+- covariates/supportiveness
+- covariates/authenticity
+- covariates/conciseness
+- covariates/female-codedness
+- covariates/personalization
+- covariates/threat
+- covariates/authoritativeness
+- covariates/detail
+- covariates/politeness
+- covariates/urgency
+- covariates/emotiveness
+- covariates/humor
+- covariates/vision
+dim_batch: full_dim
+ensemble_size: 60
+hidden_dimension: 64
+learning_rate: 0.1 # 0.0005
+num_monte_carlo_samples: 100
+replay_buffer_capacity: 1024
+run_date: '2025-14-04'
+type: poNATS-ensemble

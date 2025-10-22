@@ -1,0 +1,34 @@
+activation: ReLU
+batch_size: 100
+cfg_path: configs/environment
+data_path: data/IHS/processed/2023/ihs_complete.csv
+device: cpu
+dim_batch: 15_dim
+dimensions:
+- threat
+- emotiveness
+- formality
+- optimism
+- complexity
+- clarity
+- female-codedness
+- conciseness
+- politeness
+- encouragement
+- detail
+- authoritativeness
+- actionability
+- severity
+- personalization
+epochs: 100
+hidden_size:
+- 64
+loss_fn: mse
+lr: 1e-3
+model_id: ihs_15dims
+model_suffix: mlp.pt
+optimizer: Adam
+outcome: steps_sqrt
+output_size: 1
+save_path: models/mlp/
+seed: 323

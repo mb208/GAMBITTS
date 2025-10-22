@@ -1,0 +1,4 @@
+prev_steps:
+  text_based: false
+  var_type: continuous
+  possible_values: none

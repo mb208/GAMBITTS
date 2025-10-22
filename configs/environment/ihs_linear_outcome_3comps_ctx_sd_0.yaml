@@ -1,0 +1,44 @@
+coefs:
+  formality:
+    coef: -0.4994438905907694
+    offline_calc: true
+    one_hot: false
+  intercept:
+    coef: 82.83602093916572
+    offline_calc: true
+    one_hot: false
+  optimism:
+    coef: 0.3523208653783577
+    offline_calc: true
+    one_hot: false
+  severity:
+    coef: -0.15796340012230414
+    offline_calc: true
+    one_hot: false
+  curr_loc: 
+      # Whether or not we want to dummify the variable
+      one_hot: True
+      # Whether or not the variable is text-based (i.e., does it use information from *current* LLM response
+      # Identifying these helps speed up code
+      text_based: False
+      # Coefficients for dummy variables corresponding to levels of categorical variable
+      work: 0.035
+      home: -0.035
+      other: 0.0
+  prev_steps:
+         one_hot: False
+         text_based: False
+         # If not one-hot encoded, need to input other parameter information 
+         # For linear models, only coefficient is needed
+         coef: 0.026
+dim_batch: batch_1
+errors:
+  dist: normal
+  iid: true
+  parms:
+    sd: 0.7097845902500587
+past_contribution: false
+seed: 323
+train_rmse: 24.532085991659486
+training_data: data/IHS/processed/2023/ihs_complete.csv
+type: linear

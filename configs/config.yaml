@@ -1,0 +1,29 @@
+defaults:
+  - environment: ihs_base_mlp_outcome_model
+  - context: context
+  - agent: tuned_mlp4ensemble
+  - simulation: sim_base
+  - env_setup: base_env_nn
+  - override /hydra/launcher: submitit_slurm
+
+possible_dimensions:
+  - actionability
+  - authoritativeness
+  - complexity
+  - detail
+  - encouragement
+  - formality
+  - optimism
+  - politeness
+  - supportiveness
+  - urgency
+  - authenticity
+  - clarity
+  - conciseness
+  - emotiveness
+  - female-codedness
+  - humor
+  - personalization
+  - severity
+  - threat
+  - vision

@@ -1,0 +1,25 @@
+S: 0
+defaults:
+- covariates/threat
+- covariates/emotiveness
+- covariates/formality
+- covariates/optimism
+- covariates/complexity
+- covariates/clarity
+- covariates/female-codedness
+- covariates/conciseness
+- covariates/politeness
+- covariates/encouragement
+- covariates/detail
+- covariates/authoritativeness
+- covariates/actionability
+- covariates/severity
+- covariates/personalization
+dim_batch: 15_dim
+intercept: true
+mu: 0.0
+mu_intercept: 77.0
+precision: 1
+precision_intercept: 0.01
+type: poNATS-linear
+v2: 1

@@ -1,0 +1,19 @@
+cfg_path: configs/simulation
+env_used: ihs_3comps_mlp_outcome_model_sd_4
+horizon: 100
+log_path: logs
+mc_iterations: 100
+n_cpus: null
+n_prompts:
+- 36
+- 5
+- 31
+- 22
+- 4
+n_samples: null
+prompt_db: data/sim_params/prompt_db_20dim.csv.gzip
+seed: 323
+sim_id: base
+store_dims: true
+vrs: null
+proj_root: data/results
