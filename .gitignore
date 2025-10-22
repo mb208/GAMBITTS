@@ -1,0 +1,51 @@
+Llama-3.2-1B-Instruct/
+meta-llama/
+
+# Outputs
+gllogs/
+logs/
+outputs/
+.vscode/
+.Rhistory
+NATS.Rproj
+
+# Data
+data/simulations*
+data/results*
+data/IHS*
+models/vae_model*
+data/sim_params*
+data/sim_params/actionability_prompts.csv
+data/sim_params/authenticity_prompts.csv
+data/sim_params/authoritativeness_prompts.csv
+data/sim_params/clarity_prompts.csv
+data/sim_params/complexity_prompts.csv
+data/sim_params/conciseness_prompts.csv
+data/sim_params/detail_prompts.csv
+data/sim_params/emotiveness_prompts.csv
+data/sim_params/encouragement_prompts.csv
+data/sim_params/female-codedness_prompts.csv
+data/sim_params/formality_prompts.csv
+data/sim_params/humor_prompts.csv
+data/sim_params/optimism_prompts.csv
+data/sim_params/personalization_prompts.csv
+data/sim_params/politeness_prompts.csv
+data/sim_params/severity_prompts.csv
+data/sim_params/supportiveness_prompts.csv
+data/sim_params/threat_prompts.csv
+data/sim_params/urgency_prompts.csv
+data/sim_params/vision_prompts.csv
+ data/sim_params/prompt_db_20dim_950samples.csv.gzip
+ data/sim_params/prompt_db_20dim.csv
+
+
+__pycache__/
+.DS_Store
+*.ipynb_checkpoints
+*checkpoint*
+notebooks/Archive_*
+.Rproj.user
+**/*.egg-info/
+multirun/
+
+
