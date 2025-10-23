@@ -142,7 +142,8 @@ if [[ "${one_d_sim}" == true ]]; then
                 > ./logs/${sim_id}_bl.txt 2>&1 &
     
     echo "Logs being written to ./logs/${sim_id}_bl.txt"
-elif [[ "${scale_arms}" == true ]]; then
+fi
+if [[ "${scale_arms}" == true ]]; then
     environments=ihs_linear_outcome_3comps$sd_lvl
     agents=ensemble_sampling_3dim,ponats_linear_3comp,fonats_linear_3comp,one_stage_mab
     sim_configs=linear${sd_lvl}_sim_3_prompts,linear${sd_lvl}_sim_5_prompts,linear${sd_lvl}_sim_15_prompts,linear${sd_lvl}_sim_30_prompts,linear${sd_lvl}_sim_40_prompts
@@ -151,7 +152,7 @@ elif [[ "${scale_arms}" == true ]]; then
     echo "Running simulation with sim_id: $sim_id"
     echo "Using environments: $environments"
     echo "Using agents: $agents"
-    echo "Using agents: $sim_configs"
+    echo "Using simulation configs: $sim_configs"
     python -m scripts.run_simulation --multirun \
             agent=$agents \
             environment=$environments \
@@ -162,8 +163,9 @@ elif [[ "${scale_arms}" == true ]]; then
                 > ./logs/${sim_id}.txt  2>&1 &
 
     echo "Logs being written to ./logs/${sim_id}.txt"
+fi
 
-elif [[ "${var_decomp_linear}" == true ]]; then
+if [[ "${var_decomp_linear}" == true ]]; then
 
 ############################################################################################################
 ######                           Scaling Variance on Generative Linear Environment
@@ -258,8 +260,8 @@ elif [[ "${var_decomp_linear}" == true ]]; then
                 > logs/${sim_id}${__sd_lvl}.txt 2>&1 &
 
     echo "Logs being written to ./logs/${sim_id}${__sd_lvl}.txt"
-
-elif [[ "${var_decomp_nonlinear}" == true ]]; then
+fi 
+if [[ "${var_decomp_nonlinear}" == true ]]; then
 ############################################################################################################
 ######                Scaling Variance on Generative Neural Net Environment
 ######
@@ -350,13 +352,14 @@ elif [[ "${var_decomp_nonlinear}" == true ]]; then
                 > logs/${sim_id}${__sd_lvl}.txt 2>&1 &
 
     echo "Logs being written to ./logs/${sim_id}${sd_lvl}.txt"
-
-elif [[ "${db_access_sim}" == true ]]; then
+fi 
+if [[ "${db_access_sim}" == true ]]; then
 ############################################################################################################
 ######                           Access to true conditional distribution of Z
 ######
 ######
 ############################################################################################################
+    python -m scripts.adjust_prompt_db.py
     environments=ihs_linear_outcome_3comps$sd_lvl
     agents=ensemble_sampling_3dim,ponats_linear_3comp
     sim_cfg=linear${sd_lvl}_sim_${n_prompts}_prompts
@@ -386,8 +389,8 @@ elif [[ "${db_access_sim}" == true ]]; then
                 simulation.sim_id=$sim_id \
                 simulation.prompt_db=data/sim_params/prompt_db_20dim_950samples.csv.gzip \
                 ~env_setup > ./logs/${sim_id}_mab.txt 2>&1 &
-
-elif [[ "${scale_dimensions}" == true ]]; then
+fi
+if [[ "${scale_dimensions}" == true ]]; then
 
 ############################################################################################################
 ######
@@ -488,8 +491,8 @@ elif [[ "${scale_dimensions}" == true ]]; then
                 > ./logs/${sim_id}_${dims}.txt  2>&1 &
 
     echo "Logs being written to ./logs/${sim_id}_${dims}.txt"
-
-elif [[ "${scale_fogambitt_arms}" == true ]]; then
+fi
+if [[ "${scale_fogambitt_arms}" == true ]]; then
 ############################################################################################################
 ######
 ######              Comparing How foGAMBITT Compares to One Stage Agents as Prompts Vary
@@ -553,8 +556,8 @@ elif [[ "${scale_fogambitt_arms}" == true ]]; then
             ~env_setup \
                 > ./logs/${sim_id}_${__sd_lvl}.txt  2>&1 &
     echo "Logs being written to ./logs/${sim_id}_${__sd_lvl}.txt"
-
-elif [[ "${hedged_1d_sim}" == true ]]; then
+fi 
+if [[ "${hedged_1d_sim}" == true ]]; then
 
 ############################################################################################################
 ######                  Simple Scenario with misspecified outcome model using prompt flags 
@@ -583,7 +586,8 @@ elif [[ "${hedged_1d_sim}" == true ]]; then
                 > ./logs/${sim_id}_nats.txt  2>&1 &
 
     echo "Logs being written to ./logs/${sim_id}_nats.txt"
-elif [[ "${covariates}" == true ]]; then
+fi
+if [[ "${covariates}" == true ]]; then
 ############################################################################################################
 ######                  3-D Scenario with covariates in outcome model
 ######
@@ -597,7 +601,7 @@ elif [[ "${covariates}" == true ]]; then
     echo "Running simulation with sim_id: $sim_id"
     echo "Using environments: $environments"
     echo "Using agents: $agents"
-    echo "Using agents: $sim_configs"
+    echo "Using simulation configs: $sim_configs"
     python -m scripts.run_simulation --multirun \
             agent=$agents \
             environment=$environments \

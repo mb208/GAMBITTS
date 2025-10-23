@@ -6,8 +6,27 @@
 To recreate the simulation results presented in the paper, run:
 
 ```bash
-bash run_all_simulations.sh
+bash run_all_simulations.sh [FLAGS]
 ```
+where `[FLAGS]` take the following values
+| Flag | Description |
+|------|--------------|
+| `--all` | Run **all** experiment blocks. |
+| `--one_d_sim` | Run 1-D baseline and misspecification experiments. |
+| `--scale_arms` | Vary the number of prompts (arms) in the 3-D linear environment. |
+| `--var_decomp_linear` | Scale the 2nd-stage variance in the **linear** outcome environment. |
+| `--var_decomp_nonlinear` | Scale the 2nd-stage variance in the **non-linear (NN)** outcome environment. |
+| `--db_access_sim` | Run database-access simulations that vary the number of samples from the generator. |
+| `--scale_dimensions` | Compare performance as latent dimensionality increases. |
+| `--scale_fogambitt_arms` | Evaluate **foGAMBITT** with extended horizons and varying prompts. |
+| `--hedged_1d_sim` | Run 1-D hedged simulations with prompt flags. |
+| `--covariates` | Run 3-D simulations that include covariates in the outcome model. |
+| `--help`, `-h` | Show usage information. |
+
+
+> **Note:** Using `--all` will launch **all experiments**.  
+> If you are not running on an HPC or a job scheduler such as **SLURM**, this will run sequentially and
+> the full suite may take a **prohibitively long time** to complete on a standard machine.
 
 Following this command, to generate the plots presented in the paper run the following command 
 
